@@ -14,5 +14,8 @@ public class birthday extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_birthday);
         mTextView=(TextView)findViewById(R.id.text);
+        String value=getIntent().getStringExtra("birthdayname");
+        Log.d("Name",value);
+        mTextView.setText("Happy Birthday\n"+value);
     }
 }
